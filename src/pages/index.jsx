@@ -30,9 +30,6 @@ export default Home1;
 
 export async function getStaticProps({ locale}) {
   const allPosts = getSortedPostsData();
-  // const req = appContext?.ctx?.req;
-  // console.log("ACA", appContext?.ctx?.req)
-  // const locale = req?.headers['accept-language']?.split(',')[0] || 'en';
   const messages = require(`../locales/${locale}.json`);
 
   return {

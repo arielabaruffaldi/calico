@@ -1,6 +1,6 @@
 {
     "settings": {
-        "siteName": "Ashley",
+        "siteName": "Pampa",
         "formspreeURL": "https://formspree.io/f/your_api_key",
         "mailchimp": {
             "url": "",
@@ -100,9 +100,9 @@
     },
     "footer": {
         "logo": {
-            "text": "Ashley."
+            "text": "Pampa."
         },
-        "copy": "© 2023 Ashley. All Rights Reserved.",
+        "copy": "© 2024 Pampa. All Rights Reserved.",
         "menu": [
             {
                 "label": "Home",

@@ -17,9 +17,7 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 register();
 
 function MyApp({ Component, pageProps }) {
-  console.log({pageProps})
   const { locale, messages } = pageProps;
-  const intl = createIntlInstance(locale);
 
   return (
     <IntlProvider locale={locale} messages={messages}>
@@ -29,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* seo end */}
       </Head>
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher /> */}
       <Component {...pageProps} />
     </IntlProvider>
   );

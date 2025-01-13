@@ -445,6 +445,9 @@ menu
                 transition-delay: .8s;
             }
         }
+        .language-switcher{
+            opacity: 0;
+        }
     }
 }
 
@@ -2631,4 +2634,8 @@ html.is-animating {
         opacity: 0;
         transition-delay: .3s;
     }
+}
+
+.pointer-all {
+    pointer-events: all;
 }
