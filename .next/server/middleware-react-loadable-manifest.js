@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"index.jsx -> @components/sliders/Testimonial":{"id":"index.jsx -> @components/sliders/Testimonial","files":["static/chunks/src_components_sliders_Testimonial_jsx.js"]}}
