@@ -11,7 +11,6 @@ import TeamSection from "@components/sections/Team";
 import LatestPostsSection from "@components/sections/LatestPosts";
 
 const TestimonialSlider = dynamic( () => import("@components/sliders/Testimonial"), { ssr: false } );
-const PartnersSlider = dynamic( () => import("@components/sliders/Partners"), { ssr: false } );
 
 const Home1 = (props) => {
   return (
@@ -19,10 +18,9 @@ const Home1 = (props) => {
       <HeroOneSection />
       <AboutSection />
       <ServicesSection />
-      <TeamSection />
-      <TestimonialSlider />
-      <PartnersSlider />
-      <LatestPostsSection posts={props.posts} />
+      {/* <TeamSection /> */}
+      {/* <TestimonialSlider /> */}
+      {/* <LatestPostsSection posts={props.posts} /> */}
     </Layouts>
   );
 };

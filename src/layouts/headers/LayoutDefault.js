@@ -7,19 +7,42 @@ import BackToTop from "../back-to-top/Index";
 import Pentagon from "@layouts/pentagon/Index";
 import LanguageSwitcher from "@/src/components/LanguageSwitcher";
 
+import { useIntl } from "react-intl";
+
 const DefaultHeader = ({ extraClass }) => {
+  const intl = useIntl();
   const [toggle, setToggle] = useState(false);
 
   const navItems = [];
 
   const { asPath } = useRouter();
 
-  AppData.header.menu.forEach((item, index) => {
+  const menuItems = [
+    {
+      label: intl.formatMessage({ id: "menu.home" }),
+      link: "/",
+    },
+    {
+      label: intl.formatMessage({ id: "menu.portfolio" }),
+      link: "/projects",
+    },
+    {
+      label: intl.formatMessage({ id: "menu.services" }),
+      link: "/services",
+    },
+    {
+      label: intl.formatMessage({ id: "menu.contact" }),
+      link: "/contact",
+    },
+    {
+      label: intl.formatMessage({ id: "menu.team" }),
+      link: "/team",
+    },
+  ];
+
+  menuItems.forEach((item, index) => {
     let s_class1 = "";
 
-    if (item.children != 0) {
-      s_class1 = "mil-has-children";
-    }
     if (
       (asPath.indexOf(item.link) != -1 && item.link != "/") ||
       asPath == item.link
@@ -30,22 +53,6 @@ const DefaultHeader = ({ extraClass }) => {
     navItems.push(newobj);
   });
 
-  const clickedMobileMenuItemParent = (e) => {
-    e.preventDefault();
-
-    const lists = document.querySelectorAll(".mil-has-children ul");
-    lists.forEach((list) => {
-      list.classList.remove("mil-active");
-    });
-
-    const links = document.querySelectorAll(".mil-has-children a");
-    links.forEach((link) => {
-      link.classList.remove("mil-active");
-    });
-
-    e.target.classList.toggle("mil-active");
-    e.target.parentNode.querySelector("ul").classList.toggle("mil-active");
-  };
 
   return (
     <>
@@ -80,17 +87,17 @@ const DefaultHeader = ({ extraClass }) => {
                       >
                         <Link
                           href={item.link}
-                          onClick={
+                          /* onClick={
                             item.children != 0
                               ? (e) => clickedMobileMenuItemParent(e)
                               : ""
-                          }
+                          } */
                         >
                           {item.label}
                         </Link>
-                        {item.children != 0 && (
+                        {item?.children != 0 && (
                           <ul>
-                            {item.children.map((subitem, key2) => (
+                            {item?.children?.map((subitem, key2) => (
                               <li
                                 key={`header-submenu${key}-item-${key2}`}
                                 className={
@@ -184,16 +191,6 @@ const DefaultHeader = ({ extraClass }) => {
                         <h6 className="mil-muted mil-mb-30">Useful links</h6>
 
                         <ul className="mil-menu-list">
-                          <li>
-                            <a href="#." className="mil-light-soft">
-                              Privacy Policy
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." className="mil-light-soft">
-                              Terms and conditions
-                            </a>
-                          </li>
                           <li>
                             <a href="#." className="mil-light-soft">
                               Cookie Policy

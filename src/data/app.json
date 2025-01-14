@@ -9,7 +9,7 @@
     },
     "header": {
         "logo": {
-            "symbol": "A.",
+            "symbol": "P.",
             "link": "/"
         },
         "menu": [
@@ -138,9 +138,9 @@
             "title": "Dribbble"
         },
         {
-            "link": "https://twitter.com",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
+            "link": "https://www.linkedin.com",
+            "icon": "fab fa-linkedin",
+            "title": "Linkedin"
         },
         {
             "link": "https://github.com",

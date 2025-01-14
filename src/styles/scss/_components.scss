@@ -519,7 +519,7 @@ menu
                     font-size: $h5 + 6px;
                 }
 
-                &:before {
+              /*   &:before {
                     content: '';
                     position: absolute;
                     left: 0;
@@ -529,10 +529,11 @@ menu
                     background-color: $lt-40;
                     transform: scale(0);
                     transition: $t-md;
-                }
+                } */
 
                 &:hover {
-                    color: $light;
+                    color: $accent;
+                    transform: translateX(10px);
                 }
 
                 &.mil-active {
@@ -556,55 +557,6 @@ menu
                 }
             }
 
-            &.mil-has-children {
-                & > a {
-                    &:hover {
-                        color: $light;
-                        padding-left: 25px;
-
-                        &:before {
-                            transform: scale(1);
-                        }
-                    }
-                }
-
-                ul {
-                    padding-left: 25px;
-                    overflow: hidden;
-                    max-height: 0;
-                    transition: $t-lg;
-
-                    li {
-                        margin-bottom: 5px;
-
-                        &:first-child {
-                            margin-top: 40px;
-                        }
-
-                        a {
-                            display: block;
-                            font-size: 12px;
-                            color: $lt-40;
-                            letter-spacing: 2px;
-                            font-weight: 500;
-                            text-transform: uppercase;
-
-                            &:before {
-                                display: none;
-                            }
-
-                            &:hover {
-                                color: $lt-80;
-                                transform: translateX(5px);
-                            }
-                        }
-                    }
-
-                    &.mil-active {
-                        max-height: 200px;
-                    }
-                }
-            }
         }
     }
 

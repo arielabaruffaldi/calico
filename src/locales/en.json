@@ -1,3 +1,33 @@
 {
-    "page.home.head.title": "Hello World"
+    "page.home.head.title": "Designing <span class=\"mil-thin\">a Better</span><br> World <span class=\"mil-thin\">Today</span>",
+    "page.home.head.subtitle": "Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.",
+    "page.home.head.button1": "What we do",
+    "page.home.head.button2": "View Works",
+    "page.home.head.scroll": "Scroll down - Scroll down -",
+    "page.about.title": "Discover <br/>Our <span class=\"mil-thin\">Studio</span>",
+    "page.about.description": "<p>At our studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.</p><p>Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.</p>",
+    "page.about.subtitle": "Passionately Creating <span class=\"mil-thin\">Design Wonders:</span> Unleashing <span class=\"mil-thin\">Boundless Creativity</span>",
+    "pages.services.title1": "Unique <span class=\"mil-thin\">Ideas</span>",
+    "pages.services.title2": "For Your <span class=\"mil-thin\">Business.</span>",
+    "pages.services.subtitle": "Professionals focused on helping your brand grow and move forward.",
+    "pages.services.button": "What we do",
+    "pages.services.item1.title": "Branding and <br>Identity Design",
+    "pages.services.item1.text": "Crafting unique brand identities that leave a lasting impression.",
+    "pages.services.item2.title": "Website Design <br>and Development",
+    "pages.services.item2.text": "Building visually stunning, user-friendly websites to elevate your presence.",
+    "pages.services.item3.title": "App Design <br>and Development",
+    "pages.services.item3.text": "Creating seamless, engaging apps that deliver exceptional experiences.",
+    "pages.services.item4.title": "Advertising and <br>Marketing Campaigns",
+    "pages.services.item4.text": "Designing impactful campaigns to amplify your brand and drive results.",
+
+    
+    "menu.home": "Home",
+    "menu.portfolio": "Portfolio",
+    "menu.services": "Services",
+    "menu.contact": "Contact",
+    "menu.team": "Team",
+
+
+    "page.testimonials.title": "<span class=\"mil-thin\">What our customers</span> <br>say about us?",
+    "page.testimonials.subtitle": "Customer reviews are a valuable source <br>of information for both businesses and consumers."
 }

@@ -1,4 +1,3 @@
-import Data from "@data/sections/hero-1.json";
 import Link from "next/link";
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import Pentagon from "@layouts/pentagon/Index";
@@ -40,29 +39,38 @@ const HeroOne = () => {
 
           <div className="container">
             <div className="mil-banner-content mil-up">
-              <h1 className="mil-muted mil-mb-60">
-                {intl.formatMessage({ id: "page.home.head.title" })}
-              </h1>
+              <h1
+                className="sm:text-4xl lg:text-8xl font-medium mil-muted mil-mb-60"
+                dangerouslySetInnerHTML={{
+                  __html: intl.formatMessage({ id: "page.home.head.title" }),
+                }}
+              ></h1>
 
               <div className="row">
                 <div className="col-md-7 col-lg-5">
-                  <p className="mil-light-soft mil-mb-60">{Data.description}</p>
+                  <p className="mil-light-soft mil-mb-60">
+                    {intl.formatMessage({ id: "page.home.head.subtitle" })}
+                  </p>
                 </div>
               </div>
 
               <Link
-                href={Data.button1.link}
+                href={"/services"}
                 className="mil-button mil-arrow-place mil-btn-space"
               >
-                <span>{Data.button1.label}</span>
+                <span>
+                  {intl.formatMessage({ id: "page.home.head.button1" })}
+                </span>
                 <ArrowIcon />
               </Link>
 
               <Link
-                href={Data.button2.link}
+                href={"/projects"}
                 className="mil-link mil-muted mil-arrow-place"
               >
-                <span>{Data.button2.label}</span>
+                <span>
+                  {intl.formatMessage({ id: "page.home.head.button2" })}
+                </span>
                 <ArrowIcon />
               </Link>
 
@@ -91,7 +99,9 @@ const HeroOne = () => {
                     <text style={{ letterSpacing: "6.5px" }}>
                       {/* circle text */}
                       <textPath xlinkHref="#circlePath">
-                        Scroll down - Scroll down -{" "}
+                        {intl.formatMessage({
+                          id: "page.home.head.scroll",
+                        })}
                       </textPath>
                     </text>
                   </g>

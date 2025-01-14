@@ -1,10 +1,4 @@
 {
-  "index.jsx -> @components/sliders/Partners": {
-    "id": "index.jsx -> @components/sliders/Partners",
-    "files": [
-      "static/chunks/src_components_sliders_Partners_jsx.js"
-    ]
-  },
   "index.jsx -> @components/sliders/Testimonial": {
     "id": "index.jsx -> @components/sliders/Testimonial",
     "files": [

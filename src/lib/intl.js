@@ -6,7 +6,6 @@ export function createIntlInstance(locale) {
   return createIntl(
     {
       locale,
-      // messages: require(`../locales/${locale}.json`), 
     },
     cache
   );
