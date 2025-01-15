@@ -3,6 +3,7 @@
 main
 
 ------------------------------------------- */
+
 *,
 *:before,
 *:after {
@@ -250,7 +251,7 @@ blockquote {
 }
 
 .mil-thin {
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 
 a {

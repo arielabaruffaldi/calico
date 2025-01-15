@@ -1,39 +1,30 @@
 {
-    "page.home.head.title": "Diseñando <span class=\"mil-thin\">un mundo </span><br> mejor <span class=\"mil-thin\">hoy</span>",
+    "page.home.head.title": "Diseñando <span class=\"mil-thin\">un mundo </span><br> mejor <span class=\"mil-thin\">juntos</span>",
     "page.home.head.subtitle": "Bienvenidos a nuestro mundo de imaginación infinita y creatividad sin límites. Juntos, emprendamos un viaje extraordinario donde los sueños se convierten en realidades tangibles.",
     "page.home.head.button1": "Qué hacemos",
     "page.home.head.button2": "Ver trabajos",
     "page.home.head.scroll": "Scroll down - Scroll down -",
-
-
     "page.about.title": "Descubre <br/>Nuestro <span class=\"mil-thin\">Estudio</span>",
     "page.about.description": "<p>En nuestro estudio, somos un colectivo de personas talentosas impulsadas por una pasión inquebrantable por transformar ideas en realidad. Con una combinación armoniosa de diversos orígenes y una amplia gama de habilidades, unimos fuerzas para crear soluciones impactantes para nuestros apreciados clientes.</p><p>La colaboración es el núcleo de lo que hacemos. Nuestro equipo prospera gracias a la sinergia que surge cuando convergen perspectivas únicas, fomentando un ambiente de creatividad ilimitada. Al aprovechar nuestra experiencia colectiva, producimos resultados extraordinarios que consistentemente superan las expectativas.</p>",
     "page.about.subtitle": "Creando con pasión <span class=\"mil-thin\">maravillas de diseño:</span> Liberando <span class=\"mil-thin\">creatividad ilimitada</span>",
-
     "pages.services.title1": "Ideas <span class=\"mil-thin\">Únicas</span>",
     "pages.services.title2": "Para tu <span class=\"mil-thin\">Negocio.</span>",
     "pages.services.subtitle": "Profesionales enfocados en ayudar a tu marca a crecer y avanzar.",
     "pages.services.button": "Lo que hacemos",
-
     "pages.services.item1.title": "Diseño de Marca <br>e Identidad",
     "pages.services.item1.text": "Creamos identidades de marca únicas que dejan una impresión duradera.",
-
     "pages.services.item2.title": "Diseño y Desarrollo <br>de Sitios Web",
     "pages.services.item2.text": "Creamos sitios web impactantes y fáciles de usar, mejorando tu presencia online.",
-
     "pages.services.item3.title": "Diseño y Desarrollo <br>de Aplicaciones",
     "pages.services.item3.text": "Diseñamos apps atractivas que brindan experiencias excepcionales.",
-
     "pages.services.item4.title": "Campañas de Publicidad <br>y Marketing",
     "pages.services.item4.text": "Diseñamos campañas impactantes para potenciar tu marca y generar resultados.",
-
     "menu.home": "Home",
     "menu.portfolio": "Proyectos",
     "menu.services": "Servicios",
     "menu.contact": "Contacto",
     "menu.team": "Equipo",
-
-
     "page.testimonials.title": "<span class=\"mil-thin\">Qué dicen nuestros clientes</span> <br>sobre nosotros?",
-    "page.testimonials.subtitle": "Las reseñas de los clientes son una fuente valiosa <br>de información tanto para empresas como para consumidores."
+    "page.testimonials.subtitle": "Las reseñas de los clientes son una fuente valiosa <br>de información tanto para empresas como para consumidores.",
+    "page.projects.title": "Algunos de nuestros <span className=\"font-light mil-thin\">mejores trabajos</span>"
 }

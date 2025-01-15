@@ -69,8 +69,9 @@ const ProjectsGrid = ({ projects, columns }) => {
                     <React.Fragment key={`projects-row-${row_key}`}>
                     {row.map((item, key) => (
                     <div className={renderProjectColumnClass(row_key, key, 'column')} key={`projects-item-${key}`}>
-
-                        <Link href={`/projects/${item.id}`} className={renderProjectColumnClass(row_key, key, 'item')} data-value-1="-30" data-value-2="0">
+                        {/* Comment link to project details */}
+                        
+                        {/* <Link href={`/projects/${item.id}`} className={renderProjectColumnClass(row_key, key, 'item')} data-value-1="-30" data-value-2="0">
                             <div className="mil-cover-frame mil-hori mil-up">
                                 <div className={renderProjectColumnClass(row_key, key, 'image')} data-value-1="1.2" data-value-2="1">
                                     <img src={item.image} alt={item.title} />
@@ -83,7 +84,21 @@ const ProjectsGrid = ({ projects, columns }) => {
                                 </div>
                                 <h4 className="mil-up">{item.title}</h4>
                             </div>
-                        </Link>
+                        </Link> */}
+                        <a href={item.demoLink} target="_blank" className={renderProjectColumnClass(row_key, key, 'item')} data-value-1="-30" data-value-2="0">
+                            <div className="mil-cover-frame mil-hori mil-up">
+                                <div className={renderProjectColumnClass(row_key, key, 'image')} data-value-1="1.2" data-value-2="1">
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                            </div>
+                            <div className="mil-descr">
+                                <div className="mil-labels mil-up mil-mb-15">
+                                    <div className="mil-label mil-upper mil-accent">{item.category}</div>
+                                    <div className="mil-label mil-upper">{item.date}</div>
+                                </div>
+                                <h4 className="mil-up">{item.title}</h4>
+                            </div>
+                        </a> 
 
                     </div>
                     ))}

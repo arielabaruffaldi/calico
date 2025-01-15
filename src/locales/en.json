@@ -1,5 +1,5 @@
 {
-    "page.home.head.title": "Designing <span class=\"mil-thin\">a Better</span><br> World <span class=\"mil-thin\">Today</span>",
+    "page.home.head.title": "Designing <span class=\"mil-thin\">a Better</span><br> World <span class=\"mil-thin\">together</span>",
     "page.home.head.subtitle": "Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.",
     "page.home.head.button1": "What we do",
     "page.home.head.button2": "View Works",
@@ -19,15 +19,12 @@
     "pages.services.item3.text": "Creating seamless, engaging apps that deliver exceptional experiences.",
     "pages.services.item4.title": "Advertising and <br>Marketing Campaigns",
     "pages.services.item4.text": "Designing impactful campaigns to amplify your brand and drive results.",
-
-    
     "menu.home": "Home",
     "menu.portfolio": "Portfolio",
     "menu.services": "Services",
     "menu.contact": "Contact",
     "menu.team": "Team",
-
-
     "page.testimonials.title": "<span class=\"mil-thin\">What our customers</span> <br>say about us?",
-    "page.testimonials.subtitle": "Customer reviews are a valuable source <br>of information for both businesses and consumers."
+    "page.testimonials.subtitle": "Customer reviews are a valuable source <br>of information for both businesses and consumers.",
+    "page.projects.title": "Some of our <span className=\"font-light mil-thin\">best works</span>"
 }

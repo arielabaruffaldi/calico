@@ -1,19 +1,31 @@
-import { getSortedProjectsData } from "@library/projects";
+import { useState } from "react";
+
 import Layouts from "@layouts/Layouts";
-import dynamic from "next/dynamic";
+import PageBanner from "@components/PageBanner";
+import ProjectsMasonry from "@components/ProjectsMasonry";
+import CallToActionSection from "@components/sections/CallToAction";
 
-const ProjectsSlider = dynamic(() => import("@components/sliders/Projects"), {
-  ssr: false,
-});
+import { getSortedProjectsData } from "@library/projects";
+import { useIntl } from "react-intl";
 
-const Projects3 = (props) => {
+const Projects = (props) => {
+  const intl = useIntl();
   return (
-    <Layouts noFooter>
-      <ProjectsSlider projects={props.projects} />
+    <Layouts>
+      <PageBanner
+        pageTitle={intl.formatMessage({ id: "page.projects.title" })}
+        breadTitle={"Portfolio"}
+        anchorLabel={"Our works"}
+        anchorLink={"#portfolio"}
+      />
+
+      <ProjectsMasonry projects={props.projects} />
+
+      <CallToActionSection />
     </Layouts>
   );
 };
-export default Projects3;
+export default Projects;
 
 export async function getStaticProps({ locale }) {
   const allProjects = getSortedProjectsData();
