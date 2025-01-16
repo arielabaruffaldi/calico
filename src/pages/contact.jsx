@@ -37,7 +37,7 @@ const Contact = () => {
       <section id="contact">
         <div className="container mil-p-120-90">
           <h3
-            className="text-3xl font-medium mil-center mil-up mil-mb-120"
+            className="sm:text-xl lg:text-3xl font-medium mil-center mil-up mil-mb-120"
             dangerouslySetInnerHTML={{
               __html: intl.formatMessage({ id: "pages.contact.subtitle" }),
             }}

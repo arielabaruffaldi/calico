@@ -13,7 +13,7 @@ const AboutSection = () => {
             <div className="col-lg-6 col-xl-5">
               <div className="mil-mb-90">
                 <h2
-                  className="mil-up mil-mb-60"
+                  className="font-medium mil-up mil-mb-60"
                   dangerouslySetInnerHTML={{
                     __html: intl.formatMessage({ id: "page.about.title" }),
                   }}
@@ -27,7 +27,7 @@ const AboutSection = () => {
                   }}
                 />
 
-                <div className="mil-about-quote">
+                <div className="hidden md:block mil-about-quote">
                   <div className="mil-avatar mil-up">
                   </div>
                   <h6

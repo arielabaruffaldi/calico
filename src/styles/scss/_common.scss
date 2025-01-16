@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-    pointer-events: none;
+    pointer-events: all;
 }
 
 .mil-relative {
@@ -125,42 +125,42 @@ h1,
 
 h2,
 .mil-h2 {
-    font-size: $h2;
+    font-size: $h2 !important;
     line-height: 120%;
 
     @media screen and (max-width: 1200px) {
-        font-size: $h2 - 12px;
+        font-size: $h2 - 12px !important;
     }
 
     @media screen and (max-width: 992px) {
-        font-size: $h2 - 24px;
+        font-size: $h2 - 24px !important;
     }
 
     @media screen and (max-width: 768px) {
-        font-size: $h2 - 32px;
+        font-size: $h2 - 32px !important;
     }
 }
 
 h3,
 .mil-h3 {
-    font-size: $h3;
+    font-size: $h3 !important;
 
     @media screen and (max-width: 1200px) {
-        font-size: $h3 - 3px;
+        font-size: $h3 - 3px !important;
     }
 
     @media screen and (max-width: 992px) {
-        font-size: $h3 - 6px;
+        font-size: $h3 - 6px !important;
     }
 
     @media screen and (max-width: 768px) {
-        font-size: $h3 - 12px;
+        font-size: $h3 - 12px !important;
     }
 }
 
 h4,
 .mil-h4 {
-    font-size: $h4;
+    font-size: $h4 !important;
 
     @media screen and (max-width: 1200px) {
         font-size: $h4 - 2px;
@@ -710,7 +710,7 @@ backgrounds
         z-index: 3;
 
         & .container {
-            pointer-events: none;
+            pointer-events: all;
         }
     }
 }

@@ -12,11 +12,25 @@ module.exports = {
     extend: {
       fontSize: {
         "xl": ["18px", "30px"],
-        "3xl": ["42px", "32px"],
+        "2xl": ["22px", "32px"],
+        "3xl": ["42px", "54px"],
         "8xl": ["86px", "120%"],
         h1: ["86px", "120%"],
+        h4: ["22px", "32px"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+      
+          '@screen xl': {
+            maxWidth: '1200px',
+          },
+        }
+      })
+    }
+  ]
 };

@@ -27,7 +27,7 @@ function LanguageSwitcher() {
   return (
     <div className="relative">
       <button
-        className="pointer-all bg-transparent text-gray-200 cursor-pointer language-switcher capitalize"
+        className="pointer-all bg-transparent cursor-pointer language-switcher capitalize"
         onClick={() => {
           setToggle(!toggle);
         }}

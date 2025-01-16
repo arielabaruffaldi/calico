@@ -23,7 +23,7 @@ const CallToActionSection = ({ bg }) => {
           </div>
           <div className="mil-center">
             <h2
-              className="mil-up mil-mb-60"
+              className="font-medium mil-up mil-mb-60"
               dangerouslySetInnerHTML={{
                 __html: intl.formatMessage({ id: "call-to-action.title" }),
               }}

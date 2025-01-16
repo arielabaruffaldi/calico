@@ -42,7 +42,7 @@ const Services = (props) => {
                         key={`services-item-${key}`}
                       >
                         <h4
-                          className="font-medium text-3xl mil-muted mil-up mil-mb-30"
+                          className="sm:text-2xl lg:text-3xl font-medium mil-muted mil-up mil-mb-30"
                           dangerouslySetInnerHTML={{
                             __html: intl.formatMessage({
                               id: item.preview_title,

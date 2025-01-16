@@ -242,7 +242,9 @@ const DefaultHeader = ({ extraClass }) => {
             {AppData.header.logo.symbol}
           </Link>
           <div className="flex flex-row gap-3">
+            <div className="language-switcher-2">
             <LanguageSwitcher />
+            </div>
             <div
               className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
               onClick={() => setToggle(!toggle)}

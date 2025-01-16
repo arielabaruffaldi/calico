@@ -115,9 +115,7 @@ const ServicesSection = () => {
                       dangerouslySetInnerHTML={{ __html: item.title }}
                     />
                     <p className="mil-light-soft mil-mb-30">{item.text}</p>
-                    <div className="mil-button mil-icon-button-sm mil-arrow-place">
-                      <ArrowIcon />
-                    </div>
+                   
                   </Link>
                 </div>
               ))}
