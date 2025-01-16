@@ -9,18 +9,18 @@ import Link from "next/link";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import LinesIcon from "@layouts/svg-icons/Lines";
+import { useIntl } from "react-intl";
 
 const Services = (props) => {
+  const intl = useIntl();
   return (
     <Layouts>
       {/* banner */}
       <div className="mil-dark-bg">
         <PageBannerDark
-          pageTitle={
-            'This is <span className="mil-thin">what</span><br> we do <span className="mil-thin">best</span>'
-          }
+          pageTitle={intl.formatMessage({ id: "page.services.title" })}
           breadTitle={"Services"}
-          anchorLabel={"Our services"}
+          anchorLabel={intl.formatMessage({ id: "page.services.button" })}
           anchorLink={"#services"}
         />
 
@@ -41,40 +41,33 @@ const Services = (props) => {
                         className="col-md-6 col-lg-6"
                         key={`services-item-${key}`}
                       >
-                        <Link
-                          href={`/services/${item.id}`}
-                          className={
-                            key % 2 == 0
-                              ? "mil-service-card-lg mil-more mil-accent-cursor mil-offset"
-                              : "mil-service-card-lg mil-more mil-accent-cursor"
-                          }
-                        >
-                          <h4
-                            className="mil-muted mil-up mil-mb-30"
-                            dangerouslySetInnerHTML={{
-                              __html: item.preview_title,
-                            }}
-                          />
-                          <p className="mil-descr mil-light-soft mil-up mil-mb-30">
-                            {item.short}
-                          </p>
-                          <ul className="mil-service-list mil-light mil-mb-30">
-                            {item.list.items
-                              .slice(0, 4)
-                              .map((list_item, list_key) => (
-                                <li
-                                  className="mil-up"
-                                  key={`services-item-${key}-list-${list_key}`}
-                                >
-                                  {list_item.label}
-                                </li>
-                              ))}
-                          </ul>
-                          <div className="mil-link mil-accent mil-arrow-place mil-up">
-                            <span>Read more</span>
-                            <ArrowIcon />
-                          </div>
-                        </Link>
+                        <h4
+                          className="font-medium text-3xl mil-muted mil-up mil-mb-30"
+                          dangerouslySetInnerHTML={{
+                            __html: intl.formatMessage({
+                              id: item.preview_title,
+                            }),
+                          }}
+                        />
+                        <p className="mil-descr mil-light-soft mil-up mil-mb-30">
+                          {intl.formatMessage({
+                            id: item.short,
+                          })}
+                        </p>
+                        <ul className="mil-service-list mil-light mil-mb-30">
+                          {item.list.items
+                            .slice(0, 4)
+                            .map((list_item, list_key) => (
+                              <li
+                                className="mil-up"
+                                key={`services-item-${key}-list-${list_key}`}
+                              >
+                                {intl.formatMessage({
+                                  id: list_item.label,
+                                })}
+                              </li>
+                            ))}
+                        </ul>
                       </div>
                     ))}
                   </div>

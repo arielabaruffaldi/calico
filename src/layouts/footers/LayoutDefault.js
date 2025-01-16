@@ -27,10 +27,10 @@ const DefaultFooter = ({ extraClass }) => {
       label: intl.formatMessage({ id: "menu.contact" }),
       link: "/contact",
     },
-    {
+    /* {
       label: intl.formatMessage({ id: "menu.team" }),
       link: "/team",
-    },
+    }, */
   ];
 
   return (
@@ -89,7 +89,7 @@ const DefaultFooter = ({ extraClass }) => {
               <div className="col-md-7 col-lg-6">
                 <div className="row justify-content-between">
                   <div className="col-md-6 col-lg-5 mil-mb-60">
-                    <h6 className="mil-muted mil-up mil-mb-30">Argentina</h6>
+                    <h6 className="text-xl font-semibold mil-muted mil-up mil-mb-30">Argentina</h6>
 
                     <p className="mil-light-soft mil-up">
                       Ciudad Autónoma de <br /> Buenos Aires

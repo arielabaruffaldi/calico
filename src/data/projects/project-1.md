@@ -3,7 +3,7 @@
 title: Ensamble Gráfico
 image: /img/works/1.jpg
 category: WEB DESIGN & DEVELOPMENT
-date: may 2022
+date: 2022
 
 #params
 layout: "one"

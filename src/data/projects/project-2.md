@@ -1,15 +1,15 @@
 ---
 #preview
-title: Home Security Camera
+title: Plantit
 image: /img/works/2.jpg
-category: TECHNOLOGY
-date: may 24 2023
+category: WEB DESIGN & APP DESIGN
+date: 2022
 
 #params
-layout: "two"
+layout: "one"
 
 #full details
-introTitle: "Home Security <span class=\"mil-thin\">Camera</span>"
+introTitle: "Plant <span class=\"mil-thin\">Base</span>"
 details:
     - label: "Client:"
       value: "Envato"
@@ -28,7 +28,7 @@ description:
       <p>Presents a simple and quiet state when not in use, delivering a gentle and security.At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.</p>
     "
 
-demoLink: "https://www.behance.net/gallery/117994149/Home-Security-Camera?tracking_source=curated_galleries_product-design"
+demoLink: "https://www.behance.net/"
 
 gallery: 
     enabled: 1

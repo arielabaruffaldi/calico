@@ -87,7 +87,7 @@ const PageBanner = ({
             </ul>
             {headingSize == 1 && (
               <h1
-                className="text-8xl mil-mb-60"
+                className="font-medium text-8xl mil-mb-60"
                 dangerouslySetInnerHTML={{ __html: pageTitle }}
               />
             )}

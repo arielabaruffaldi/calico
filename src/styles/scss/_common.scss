@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-    pointer-events: all;
+    pointer-events: none;
 }
 
 .mil-relative {
@@ -710,7 +710,7 @@ backgrounds
         z-index: 3;
 
         & .container {
-            pointer-events: all;
+            pointer-events: none;
         }
     }
 }

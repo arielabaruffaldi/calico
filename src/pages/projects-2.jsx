@@ -4,8 +4,10 @@ import ProjectsGrid from "@components/ProjectsGrid";
 import CallToActionSection from "@components/sections/CallToAction";
 
 import { getSortedProjectsData } from "@library/projects";
+import { useIntl } from "react-intl";
 
 const Projects2 = (props) => {
+  const intl = useIntl();
   return (
     <Layouts>
       <PageBanner
@@ -13,7 +15,7 @@ const Projects2 = (props) => {
           'Designing a <br> Better <span className="mil-thin">World Today</span>'
         }
         breadTitle={"Portfolio"}
-        anchorLabel={"Our works"}
+        anchorLabel={intl.formatMessage({ id: "page.projects.button" })}
         anchorLink={"#portfolio"}
       />
 

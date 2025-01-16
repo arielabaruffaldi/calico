@@ -34,10 +34,10 @@ const DefaultHeader = ({ extraClass }) => {
       label: intl.formatMessage({ id: "menu.contact" }),
       link: "/contact",
     },
-    {
+    /*  {
       label: intl.formatMessage({ id: "menu.team" }),
       link: "/team",
-    },
+    }, */
   ];
 
   menuItems.forEach((item, index) => {
@@ -52,7 +52,6 @@ const DefaultHeader = ({ extraClass }) => {
     let newobj = Object.assign({}, item, { classes: s_class1 });
     navItems.push(newobj);
   });
-
 
   return (
     <>

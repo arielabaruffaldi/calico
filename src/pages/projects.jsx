@@ -13,7 +13,7 @@ const Projects3 = (props) => {
       <PageBanner
         pageTitle={intl.formatMessage({ id: "page.home.head.title" })}
         breadTitle={"Portfolio"}
-        anchorLabel={"Our works"}
+        anchorLabel={intl.formatMessage({ id: "page.projects.button" })}
         anchorLink={"#portfolio"}
       />
 

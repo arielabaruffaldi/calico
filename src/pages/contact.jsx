@@ -4,21 +4,23 @@ import { Formik } from "formik";
 import AppData from "@data/app.json";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
+import { useIntl } from "react-intl";
 
 const Contact = () => {
+  const intl = useIntl();
   return (
     <Layouts>
       <PageBanner
-        pageTitle={"Get in touch!"}
-        breadTitle={"Contact"}
-        anchorLabel={"Send message"}
+        pageTitle={intl.formatMessage({ id: "pages.contact.title" })}
+        breadTitle={intl.formatMessage({ id: "menu.contact" })}
+        anchorLabel={intl.formatMessage({ id: "pages.contact.button" })}
         anchorLink={"#contact"}
         paddingBottom={1}
         align={"center"}
       />
 
       {/* map */}
-      <div className="mil-map-frame mil-up">
+      {/* <div className="mil-map-frame mil-up">
         <div className="mil-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1396.5769090312324!2d-73.6519672!3d45.5673453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91f8abc30e0ff%3A0xfc6d9cbb49022e9c!2sManoir%20Saint-Joseph!5e0!3m2!1sen!2sua!4v1685485811069!5m2!1sen!2sua"
@@ -28,15 +30,18 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-      </div>
+      </div> */}
       {/* map end */}
 
       {/* contact form */}
       <section id="contact">
         <div className="container mil-p-120-90">
-          <h3 className="mil-center mil-up mil-mb-120">
-            Let's <span className="mil-thin">Talk</span>
-          </h3>
+          <h3
+            className="text-3xl font-medium mil-center mil-up mil-mb-120"
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage({ id: "pages.contact.subtitle" }),
+            }}
+          />
 
           <Formik
             initialValues={{ email: "", name: "", message: "" }}
@@ -111,40 +116,49 @@ const Contact = () => {
                 <div className="col-lg-6 mil-up">
                   <input
                     type="text"
-                    placeholder="What's your name"
+                    placeholder={intl.formatMessage({
+                      id: "pages.contact.name",
+                    })}
                     name="name"
                     required="required"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.name}
+                    className="mb-5 p-4"
                   />
                 </div>
                 <div className="col-lg-6 mil-up">
                   <input
                     type="email"
-                    placeholder="Your Email"
+                    placeholder={intl.formatMessage({
+                      id: "pages.contact.email",
+                    })}
                     name="email"
                     required="required"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
+                    className="mb-5 p-4"
                   />
                 </div>
                 <div className="col-lg-12 mil-up">
                   <textarea
-                    placeholder="Tell us about our project"
+                    placeholder={intl.formatMessage({
+                      id: "pages.contact.message",
+                    })}
                     name="message"
                     required="required"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.message}
+                    className="mb-4 p-4"
                   />
                 </div>
                 <div className="col-lg-8">
-                  <p className="mil-up mil-mb-30">
+                  {/*  <p className="mil-up mil-mb-30">
                     <span className="mil-accent">*</span> We promise not to
                     disclose your personal information to third parties.
-                  </p>
+                  </p> */}
                 </div>
                 <div className="col-lg-4">
                   <div className="mil-adaptive-right mil-up mil-mb-30">
@@ -152,7 +166,9 @@ const Contact = () => {
                       type="submit"
                       className="mil-button mil-arrow-place"
                     >
-                      <span>Send message</span>
+                      <span>
+                        {intl.formatMessage({ id: "pages.contact.button" })}
+                      </span>
                       <ArrowIcon />
                     </button>
                   </div>

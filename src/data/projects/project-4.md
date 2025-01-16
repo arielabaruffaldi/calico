@@ -1,9 +1,9 @@
 ---
 #preview
-title: Cascade of Lava
+title: Crowdvac
 image: /img/works/4.jpg
-category: TECHNOLOGY
-date: may 24 2023
+category: WEB DESIGN & DEVELOPMENT
+date: 2022
 
 #params
 layout: "four"
