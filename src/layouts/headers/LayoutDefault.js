@@ -58,7 +58,7 @@ const DefaultHeader = ({ extraClass }) => {
       {/* menu */}
       <div className={`mil-menu-frame ${toggle ? "mil-active" : ""}`}>
        {/* frame clone */}
-       <div className="mil-frame-top">
+       {/* <div className="mil-frame-top">
           <Link href={AppData.header.logo.link} className="mil-logo">
             {AppData.header.logo.symbol}
           </Link>
@@ -71,7 +71,7 @@ const DefaultHeader = ({ extraClass }) => {
               <span />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* frame clone end */}
         <div className="container">
           <div className="mil-menu-content">
@@ -241,7 +241,7 @@ const DefaultHeader = ({ extraClass }) => {
           <Link href={AppData.header.logo.link} className="mil-logo">
             {AppData.header.logo.symbol}
           </Link>
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-row">
             <div className="language-switcher-2">
               <LanguageSwitcher />
             </div>

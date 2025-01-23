@@ -48,7 +48,7 @@ function LanguageSwitcher() {
         {locale === "en" ? "English" : "Español"}
       </button>
       {toggle && (
-        <div className="absolute top-8 right-0 bg-gray-800 rounded-md p-2">
+        <div className="absolute top-8 right-0 bg-gray-800 rounded-md">
           {locales.map((lng) => (
             <button
               key={lng}
