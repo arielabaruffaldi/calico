@@ -192,6 +192,10 @@ frame
     width: 100%;
     height: 100%;
 
+    &.mil-active{
+        z-index: 999;
+    }
+
     @media screen and (max-width: 1200px) {
         padding: 30px;
     }
@@ -221,8 +225,8 @@ frame
                 & span:before {
                     background: $light;
                 }
+                pointer-events: all;
             }
-
         }
     }
 
@@ -444,9 +448,6 @@ menu
                 transform: translateY(0);
                 transition-delay: .8s;
             }
-        }
-        .language-switcher{
-            opacity: 0;
         }
     }
 }
@@ -2590,4 +2591,97 @@ html.is-animating {
 
 .pointer-all {
     pointer-events: all;
+}
+
+/* -------------------------------------------
+
+language switcher
+
+------------------------------------------- */
+.language-switcher {
+    position: relative;
+    z-index: 999;
+    
+    button {
+        color: white;
+        padding: 8px 16px;
+        transition: $t-md;
+        
+        &:hover {
+            color: $accent;
+        }
+    }
+    
+    .absolute {
+        z-index: 1000;
+        background-color: $dark;
+        border: 1px solid $lt-10;
+        border-radius: 8px;
+        min-width: 120px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 8px 16px;
+            color: white;
+            
+            &:hover {
+                background-color: $accent;
+                color: $dark;
+            }
+
+            &:first-child {
+                border-radius: 8px 8px 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+}
+
+// Para el language switcher en el frame
+.language-switcher-2 {
+    @extend .language-switcher;
+    
+
+    .absolute {
+        background-color: $light;
+        border-color: $dt-10;
+        
+        button {
+            color: $dark;
+            
+            &:hover {
+                background-color: $accent;
+                color: $light;
+            }
+        }
+    }
+}
+
+// Para el language switcher en el menú
+.menu-language-switcher {
+    .language-switcher {
+        button {
+            color: $light;
+        }
+
+        .absolute {
+            background-color: $dark;
+            border-color: $lt-10;
+            
+            button {
+                color: $light;
+                
+                &:hover {
+                    background-color: $accent;
+                    color: $dark;
+                }
+            }
+        }
+    }
 }

@@ -57,22 +57,7 @@ const DefaultHeader = ({ extraClass }) => {
     <>
       {/* menu */}
       <div className={`mil-menu-frame ${toggle ? "mil-active" : ""}`}>
-        {/* frame clone */}
-        <div className="mil-frame-top">
-          <Link href={AppData.header.logo.link} className="mil-logo">
-            {AppData.header.logo.symbol}
-          </Link>
-          <div className="flex flex-row gap-3">
-            <LanguageSwitcher />
-            <div
-              className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
-              onClick={() => setToggle(!toggle)}
-            >
-              <span />
-            </div>
-          </div>
-        </div>
-        {/* frame clone end */}
+       
         <div className="container">
           <div className="mil-menu-content">
             <div className="row">
@@ -236,14 +221,14 @@ const DefaultHeader = ({ extraClass }) => {
       {/* curtain end */}
 
       {/* frame */}
-      <div className="mil-frame">
+      <div className={`mil-frame ${toggle ? "mil-active" : ""}`}>
         <div className="mil-frame-top">
           <Link href={AppData.header.logo.link} className="mil-logo">
             {AppData.header.logo.symbol}
           </Link>
           <div className="flex flex-row gap-3">
             <div className="language-switcher-2">
-            <LanguageSwitcher />
+              <LanguageSwitcher />
             </div>
             <div
               className={`mil-menu-btn ${toggle ? "mil-active" : ""}`}
