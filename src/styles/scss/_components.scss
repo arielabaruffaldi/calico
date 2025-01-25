@@ -116,7 +116,7 @@ cursor
         }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1480px) {
         display: none;
     }
 }
@@ -192,22 +192,22 @@ frame
     width: 100%;
     height: 100%;
 
-    &.mil-active{
+    &.mil-active {
         z-index: 999;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1480px) {
         padding: 30px;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1480px) {
         padding: 0;
         z-index: 999;
         height: 90px;
     }
 
     & .mil-frame-top {
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             height: 90px;
             background-color: $dt-95;
             border-bottom: solid 1px $lt-10;
@@ -225,6 +225,7 @@ frame
                 & span:before {
                     background: $light;
                 }
+
                 pointer-events: all;
             }
         }
@@ -236,7 +237,7 @@ frame
         justify-content: space-between;
         align-items: flex-end;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             display: none;
         }
 
@@ -285,6 +286,7 @@ menu button
     transition: $t-md;
 
     &.mil-active {
+
         & span,
         & span:after,
         & span:before {
@@ -370,7 +372,7 @@ menu
         width: 100%;
         padding: 50px 60px;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             display: none;
         }
 
@@ -393,7 +395,7 @@ menu
         opacity: 0;
         transition: $t-md;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             transform: translateY(30px);
         }
     }
@@ -422,7 +424,7 @@ menu
             transition: $t-md;
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             display: none;
         }
 
@@ -528,7 +530,7 @@ menu
                     font-size: $h5 + 6px;
                 }
 
-              /*   &:before {
+                /*   &:before {
                     content: '';
                     position: absolute;
                     left: 0;
@@ -556,7 +558,7 @@ menu
             }
 
             &.mil-active {
-                & > a {
+                &>a {
                     color: $accent;
 
                     &:hover {
@@ -569,7 +571,7 @@ menu
         }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1480px) {
         justify-content: center;
 
         & ul {
@@ -644,7 +646,7 @@ banner
     & .mil-banner-content {
         padding: 150px 0 0 0;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             padding: 180px 0 0 0;
         }
     }
@@ -1341,7 +1343,7 @@ services
             }
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             padding: 30px;
         }
     }
@@ -2265,6 +2267,7 @@ accordion
                 .mil-plus {
                     opacity: 0;
                 }
+
                 .mil-minus {
                     opacity: 1;
                 }
@@ -2308,7 +2311,7 @@ accordion
     overflow: hidden;
 }
 
-.mil-active + .mil-accordion-content {
+.mil-active+.mil-accordion-content {
     margin-bottom: 30px;
 }
 
@@ -2454,7 +2457,7 @@ images
     position: relative;
     overflow: hidden;
 
-    & > img {
+    &>img {
         position: absolute;
         top: 0;
         left: 0;
@@ -2562,7 +2565,7 @@ html.is-animating {
         // transition-delay: .5s;
         // transform: scale(.9);
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1480px) {
             transform: scale(1);
             opacity: 1;
         }
@@ -2610,19 +2613,19 @@ language switcher
     position: relative;
     z-index: 999;
     pointer-events: all;
-    
+
     button {
         color: $light;
         transition: $t-md;
         pointer-events: all;
         text-align: left;
         padding: 4px 8px;
-        
+
         &:hover {
             color: #0e5ab4;
         }
     }
-    
+
     .absolute {
         z-index: 1000;
         background-color: $dark;
@@ -2632,7 +2635,7 @@ language switcher
         width: max-content;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         pointer-events: all;
-        
+
         button {
             display: block;
             width: 100%;
@@ -2641,7 +2644,7 @@ language switcher
             color: $light;
             pointer-events: all;
             white-space: nowrap;
-            
+
             &:hover {
                 background-color: #0e5ab4;
                 color: $dark;
@@ -2660,9 +2663,10 @@ language switcher
 
 // Para el language switcher en el frame
 .language-switcher-2 {
+
     @extend .language-switcher;
     pointer-events: all;
-    
+
     button {
         color: $dark;
     }
@@ -2670,14 +2674,21 @@ language switcher
     .absolute {
         background-color: $light;
         border-color: $dt-10;
-        
+
         button {
             color: $dark;
-            
+
             &:hover {
                 background-color: #0e5ab4;
                 color: $light;
             }
+        }
+    }
+
+
+    @media screen and (max-width: 1480px) {
+        button {
+            color: white
         }
     }
 }
@@ -2685,7 +2696,7 @@ language switcher
 // Para el language switcher en el menú
 .menu-language-switcher {
     pointer-events: all;
-    
+
     .language-switcher {
         button {
             color: $light;
@@ -2694,10 +2705,10 @@ language switcher
         .absolute {
             background-color: $dark;
             border-color: $lt-10;
-            
+
             button {
                 color: $light;
-                
+
                 &:hover {
                     background-color: $accent;
                     color: $dark;
@@ -2706,5 +2717,3 @@ language switcher
         }
     }
 }
-
-
