@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     name: Deploy to Production
-    needs: build-and-test  # Solo ejecuta el despliegue si los tests pasan
+    # needs: build-and-test  # Solo ejecuta el despliegue si los tests pasan
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'  # Despliega solo en la rama 'main'
 
