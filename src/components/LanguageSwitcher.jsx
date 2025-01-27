@@ -20,9 +20,13 @@ function LanguageSwitcher() {
   }, []);
 
   const changeLanguage = (newLocale) => {
-    // Cambia el idioma de la ruta actual sin recargar la página
-    // El idioma se maneja a través de la URL
-    window.location.href = `/${newLocale}${asPath.substring(3)}`;
+    // Si la ruta comienza con /es/ o /en/, quitamos esa parte
+    const pathWithoutLocale = asPath.replace(/^\/[a-z]{2}\//, '/');
+
+    console.log({pathWithoutLocale});
+    
+    // Construimos la nueva URL con el nuevo idioma
+    window.location.href = `/${newLocale}${pathWithoutLocale}`;
     setToggle(false);
   };
 
