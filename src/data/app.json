@@ -1,6 +1,6 @@
 {
     "settings": {
-        "siteName": "Ashley",
+        "siteName": "Pampa",
         "formspreeURL": "https://formspree.io/f/your_api_key",
         "mailchimp": {
             "url": "",
@@ -9,7 +9,7 @@
     },
     "header": {
         "logo": {
-            "symbol": "A.",
+            "symbol": "P.",
             "link": "/"
         },
         "menu": [
@@ -100,12 +100,12 @@
     },
     "footer": {
         "logo": {
-            "text": "Ashley."
+            "text": "Pampa."
         },
-        "copy": "© 2023 Ashley. All Rights Reserved.",
+        "copy": "Pampa. All Rights Reserved.",
         "menu": [
             {
-                "label": "Home",
+                "label": "Homepage",
                 "link": "/"
             },
             {
@@ -138,9 +138,9 @@
             "title": "Dribbble"
         },
         {
-            "link": "https://twitter.com",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
+            "link": "https://www.linkedin.com",
+            "icon": "fab fa-linkedin",
+            "title": "Linkedin"
         },
         {
             "link": "https://github.com",

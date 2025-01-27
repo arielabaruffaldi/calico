@@ -36,3 +36,13 @@ const E404 = () => {
   );
 };
 export default E404;
+
+export async function getStaticProps({ locale }) {
+  const messages = require(`../locales/${locale}.json`);
+
+  return {
+    props: {
+      messages,
+    },
+  };
+}

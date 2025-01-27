@@ -11,3 +11,13 @@ const Home2 = (props) => {
   );
 };
 export default Home2;
+
+export async function getStaticProps({ locale }) {
+  const messages = require(`../locales/${locale}.json`);
+
+  return {
+    props: {
+      messages,
+    },
+  };
+}

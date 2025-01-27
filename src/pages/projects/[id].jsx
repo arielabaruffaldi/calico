@@ -82,14 +82,16 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
     const postData = await getProjectData(params.id)
     const allProjects = await getSortedProjectsData()
+    const messages = require(`./../../locales/${locale}.json`);
 
     return {
       props: {
         data: postData,
-        projects: allProjects
+        projects: allProjects,
+        messages
       }
     }
 }

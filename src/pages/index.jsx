@@ -9,9 +9,9 @@ import AboutSection from "@components/sections/About";
 import ServicesSection from "@components/sections/Services";
 import TeamSection from "@components/sections/Team";
 import LatestPostsSection from "@components/sections/LatestPosts";
+import CallToActionSection from "../components/sections/CallToAction";
 
 const TestimonialSlider = dynamic( () => import("@components/sliders/Testimonial"), { ssr: false } );
-const PartnersSlider = dynamic( () => import("@components/sliders/Partners"), { ssr: false } );
 
 const Home1 = (props) => {
   return (
@@ -19,21 +19,24 @@ const Home1 = (props) => {
       <HeroOneSection />
       <AboutSection />
       <ServicesSection />
-      <TeamSection />
-      <TestimonialSlider />
-      <PartnersSlider />
-      <LatestPostsSection posts={props.posts} />
+      <CallToActionSection />
+
+      {/* <TeamSection /> */}
+      {/* <TestimonialSlider /> */}
+      {/* <LatestPostsSection posts={props.posts} /> */}
     </Layouts>
   );
 };
 export default Home1;
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale}) {
   const allPosts = getSortedPostsData();
+  const messages = require(`../locales/${locale}.json`);
 
   return {
     props: {
-      posts: allPosts
+      posts: allPosts,
+      messages
     }
   }
 }

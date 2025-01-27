@@ -1,12 +1,12 @@
 ---
 #preview
-title: Kemia Honest Skincare
+title: Xborderpack
 image: /img/works/3.jpg
-category: TECHNOLOGY
-date: may 24 2023
+category: WEB DESIGN & DEVELOPMENT
+date: 2022
 
 #params
-layout: "three"
+layout: "one"
 
 #full details
 introTitle: Kemia Honest <span class="mil-thin">Skincare</span>
@@ -28,6 +28,9 @@ description:
       <p>A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy.The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.</p>
       <p>Presents a simple and quiet state when not in use, delivering a gentle and security.At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.</p>
     "
+
+demoLink: "http://www.xborderpack.com/"
+
 
 gallery: 
     enabled: 1
