@@ -30,8 +30,6 @@ const ServicesSection = () => {
     },
   ];
 
-  console.log({items})
-
   return (
     <>
       {/* services */}
