@@ -3,7 +3,7 @@ name: Deploy to DonWeb
 on:
   push:
     branches:
-      - production  # Cambia "production" por la rama que quieras usar para el despliegue.
+      - main  
 
 jobs:
   deploy:
