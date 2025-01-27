@@ -9,24 +9,24 @@ on:
       - main  # Ejecuta en los pull requests dirigidos a la rama 'main'
 
 jobs:
-  build-and-test:
-    name: Build and Test
-    runs-on: ubuntu-latest
+  # build-and-test:
+  #   name: Build and Test
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3  # Clona el repositorio
+  #   steps:
+  #     - name: Check out code
+  #       uses: actions/checkout@v3  # Clona el repositorio
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16  # Especifica la versión de Node.js que usa tu app
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16  # Especifica la versión de Node.js que usa tu app
 
-      - name: Install dependencies
-        run: npm install  # Instala las dependencias del proyecto
+  #     - name: Install dependencies
+  #       run: npm install  # Instala las dependencias del proyecto
 
-      # - name: Run tests
-      #   run: npm test  # Ejecuta los tests para verificar que todo funcione correctamente
+  #     # - name: Run tests
+  #     #   run: npm test  # Ejecuta los tests para verificar que todo funcione correctamente
 
   deploy:
     name: Deploy to Production
