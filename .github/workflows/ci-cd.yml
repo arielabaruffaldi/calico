@@ -1,41 +1,56 @@
-name: DevOps-GitHibActions
-on: push
+name: CI/CD for React App
+
+on:
+  push:
+    branches:
+      - main  # Ejecuta el workflow cuando haya un push en la rama 'main'
+  pull_request:
+    branches:
+      - main  # Ejecuta en los pull requests dirigidos a la rama 'main'
+
 jobs:
-  # Build Job
-  build:
+  build-and-test:
+    name: Build and Test
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-      - name: Install Node
+      - name: Check out code
+        uses: actions/checkout@v3  # Clona el repositorio
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.x
-      - name: Install Dependencies
-        run: npm install
-      - name: Build Project
-        run: npm run build
-      - name: Upload artifact to enable deployment
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
-# Deploy Job
+          node-version: 16  # Especifica la versión de Node.js que usa tu app
+
+      - name: Install dependencies
+        run: npm install  # Instala las dependencias del proyecto
+
+      - name: Run tests
+        run: npm test  # Ejecuta los tests para verificar que todo funcione correctamente
+
   deploy:
-    # Add a dependency to the build job
-    needs: build
-    # Only deploy on master branch
-    if: github.ref == 'refs/heads/main'
-    # Specify runner + deployment step
+    name: Deploy to Production
+    needs: build-and-test  # Solo ejecuta el despliegue si los tests pasan
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'  # Despliega solo en la rama 'main'
+
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          name: production-files
-          path: ./dist
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build  # Genera los archivos optimizados para producción
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.CI_CD_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build  # Directorio generado tras el build
