@@ -31,5 +31,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}  # Dirección del servidor FTP.
           username: ${{ secrets.FTP_USERNAME }}  # Usuario.
           password: ${{ secrets.FTP_PASSWORD }}  # Contraseña.
-          local-dir: build  # Carpeta local a subir (generada con npm run build).
+          local-dir: build/  # Carpeta local a subir (generada con npm run build).
           server-dir: /public_html  # Carpeta del servidor (ajústala según tu configuración).
