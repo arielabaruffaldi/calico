@@ -89,13 +89,15 @@ const DefaultFooter = ({ extraClass }) => {
               <div className="col-md-7 col-lg-6">
                 <div className="row justify-content-between">
                   <div className="col-md-6 col-lg-5 mil-mb-60">
-                    <h6 className="text-xl font-semibold mil-muted mil-up mil-mb-30">Argentina</h6>
+                    <h6 className="text-xl font-semibold mil-muted mil-up mil-mb-30">
+                      Argentina
+                    </h6>
 
                     <p className="mil-light-soft mil-up">
                       Ciudad Autónoma de <br /> Buenos Aires
                     </p>
                   </div>
-                 {/*  <div className="col-md-6 col-lg-5 mil-mb-60">
+                  {/*  <div className="col-md-6 col-lg-5 mil-mb-60">
                     <h6 className="mil-muted mil-up mil-mb-30">USA</h6>
 
                     <p className="mil-light-soft mil-up">
@@ -122,7 +124,9 @@ const DefaultFooter = ({ extraClass }) => {
                       ))}
                     </ul>
                   </div>
-                  <p className="mil-light-soft mil-up">{AppData.footer.copy}</p>
+                  <p className="mil-light-soft mil-up">
+                    © {new Date().getFullYear()} {AppData.footer.copy}
+                  </p>
                 </div>
               </div>
             </div>
