@@ -194,6 +194,10 @@ frame
 
     &.mil-active {
         z-index: 999;
+
+        .language-switcher-2 {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 1480px) {
@@ -2661,7 +2665,6 @@ language switcher
     }
 }
 
-// Para el language switcher en el frame
 .language-switcher-2 {
 
     @extend .language-switcher;
