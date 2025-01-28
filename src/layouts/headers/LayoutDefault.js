@@ -117,7 +117,7 @@ const DefaultHeader = ({ extraClass }) => {
                   </ul>
                 </nav>
               </div>
-              <div className="col-xl-7">
+           {/*    <div className="col-xl-7">
                 <div className="mil-menu-right-frame">
                   <div className="mil-animation-in">
                     <div className="mil-animation-frame">
@@ -224,7 +224,7 @@ const DefaultHeader = ({ extraClass }) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
