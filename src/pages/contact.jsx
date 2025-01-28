@@ -5,8 +5,11 @@ import AppData from "@data/app.json";
 
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import { useIntl } from "react-intl";
+import dynamic from "next/dynamic";
 
-const Contact = () => {
+const Loader = dynamic(() => import("./../components/Loader"), { ssr: false });
+
+const Contact = ({ formspreeKey }) => {
   const intl = useIntl();
   return (
     <Layouts>
@@ -74,10 +77,14 @@ const Contact = () => {
               })
                 .then((response) => {
                   if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
+                    status.innerHTML = `<p>${intl.formatMessage(
+                      {
+                        id: "pages.contact.success",
+                      }
+                    )}</p>`;
                     form.reset();
                   } else {
-                    response.json().then((data) => {
+                    return response.json().then((data) => {
                       if (Object.hasOwn(data, "errors")) {
                         status.innerHTML = data["errors"]
                           .map((error) => error["message"])
@@ -92,9 +99,13 @@ const Contact = () => {
                 .catch((error) => {
                   status.innerHTML =
                     "Oops! There was a problem submitting your form";
+                })
+                .finally(() => {
+                  values.name = "";
+                  values.email = "";
+                  values.message = "";
+                  setSubmitting(false);
                 });
-
-              setSubmitting(false);
             }}
           >
             {({
@@ -105,12 +116,11 @@ const Contact = () => {
               handleBlur,
               handleSubmit,
               isSubmitting,
-              /* and other goodies */
             }) => (
               <form
                 onSubmit={handleSubmit}
                 id="contactForm"
-                action={AppData.settings.formspreeURL}
+                action={`https://formspree.io/f/${formspreeKey}`}
                 className="row align-items-center"
               >
                 <div className="col-lg-6 mil-up">
@@ -154,12 +164,7 @@ const Contact = () => {
                     className="mb-4 p-4"
                   />
                 </div>
-                <div className="col-lg-8">
-                  {/*  <p className="mil-up mil-mb-30">
-                    <span className="mil-accent">*</span> We promise not to
-                    disclose your personal information to third parties.
-                  </p> */}
-                </div>
+                <div className="col-lg-8"></div>
                 <div className="col-lg-4">
                   <div className="mil-adaptive-right mil-up mil-mb-30">
                     <button
@@ -169,7 +174,12 @@ const Contact = () => {
                       <span>
                         {intl.formatMessage({ id: "pages.contact.button" })}
                       </span>
-                      <ArrowIcon />
+
+                      {isSubmitting ? (
+                        <Loader color="#fff" width={10} height={10} />
+                      ) : (
+                        <ArrowIcon />
+                      )}
                     </button>
                   </div>
                 </div>
@@ -191,6 +201,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       messages,
+      formspreeKey: process.env.FORMSPREE_API_KEY
     },
   };
 }

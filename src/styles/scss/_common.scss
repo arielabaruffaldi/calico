@@ -472,6 +472,17 @@ link
 button
 
 ------------------------------------------- */
+
+.form-status{
+    p {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: $dark;
+    }
+}
+
 .mil-button {
     cursor: pointer;
     display: inline-flex;
@@ -493,6 +504,8 @@ button
         white-space: nowrap;
     }
 
+
+
     & svg {
         margin-left: 30px;
         border-radius: 50%;
@@ -502,8 +515,16 @@ button
         background-color: $dark;
         transition: $t-md;
 
+
+
         & path {
             fill: $accent;
+        }
+    }
+
+    .loader-container {
+        path {
+            fill: inherit;
         }
     }
 
@@ -692,7 +713,7 @@ backgrounds
 ------------------------------------------- */
 .mil-dark-bg {
     position: relative;
-    
+
     &:before {
         content: '';
         width: 100%;
@@ -894,7 +915,20 @@ spaces
     ul {
         margin-left: 1em;
     }
-    p, ul, blockquote, ol, h1, h2, h3, h4, h5, h6, iframe, table, object {
+
+    p,
+    ul,
+    blockquote,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    iframe,
+    table,
+    object {
         margin-bottom: 30px;
 
         &:last-child {

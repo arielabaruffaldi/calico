@@ -66,6 +66,7 @@
     "pages.contact.email": "Your email",
     "pages.contact.message": "Tell us about your project",
     "pages.contact.button": "Send Message",
+    "pages.contact.success": "thanks for your submission!",
     "pages.contact.title": "Get in touch!",
     "pages.contact.subtitle": "Let's <span className=\"font-light mil-thin\">Talk</span>"
 }

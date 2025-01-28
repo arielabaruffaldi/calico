@@ -1,15 +1,10 @@
 {
     "settings": {
-        "siteName": "Pampa",
-        "formspreeURL": "https://formspree.io/f/your_api_key",
-        "mailchimp": {
-            "url": "",
-            "key": ""
-        }
+        "siteName": "Calico"
     },
     "header": {
         "logo": {
-            "symbol": "P.",
+            "symbol": "C.",
             "link": "/"
         },
         "menu": [
@@ -100,9 +95,9 @@
     },
     "footer": {
         "logo": {
-            "text": "Pampa."
+            "text": "Calico."
         },
-        "copy": "Pampa. All Rights Reserved.",
+        "copy": "Calico. All Rights Reserved.",
         "menu": [
             {
                 "label": "Homepage",
@@ -121,7 +116,7 @@
                 "link": "/contact"
             },
             {
-                "label": "Blog",
+            "label": "Blog",
                 "link": "/blog"
             }
         ]

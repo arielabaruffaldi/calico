@@ -68,6 +68,7 @@
     "pages.contact.email": "Tu email",
     "pages.contact.message": "Contanos sobre tu proyecto",
     "pages.contact.button": "Enviar mensaje",
+    "pages.contact.success": "Gracias por contactarnos!",
     "pages.contact.title": "Contactanos!",
     "pages.contact.subtitle": "Hablemos"
 }
