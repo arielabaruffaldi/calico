@@ -30,19 +30,6 @@ function LanguageSwitcher() {
     setToggle(false);
   };
 
-  /* return (
-    <select
-      value={locale}
-      onChange={(e) => changeLanguage(e.target.value)}
-      className='pointer-all bg-transparent text-gray-200 cursor-pointer language-switcher'
-    >
-      {locales.map((lng) => (
-        <option key={lng} value={lng}>
-          {lng === 'en' ? 'English' : 'Español'}
-        </option>
-      ))}
-    </select>
-  ); */
   return (
     <div className="relative" ref={dropdownRef}>
       <button
