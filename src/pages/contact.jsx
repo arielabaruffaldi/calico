@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 const Loader = dynamic(() => import("./../components/Loader"), { ssr: false });
 
-const Contact = ({ formspreeKey }) => {
+const Contact = () => {
   const intl = useIntl();
   return (
     <Layouts>
@@ -120,7 +120,7 @@ const Contact = ({ formspreeKey }) => {
               <form
                 onSubmit={handleSubmit}
                 id="contactForm"
-                action={`https://formspree.io/f/${formspreeKey}`}
+                action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_API_KEY}`}
                 className="row align-items-center"
               >
                 <div className="col-lg-6 mil-up">
@@ -201,7 +201,6 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       messages,
-      formspreeKey: process.env.FORMSPREE_API_KEY
     },
   };
 }
