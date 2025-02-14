@@ -771,6 +771,9 @@ spaces
 
 .mil-mb-60 {
     margin-bottom: 70px;
+    @media screen and (max-width: 992px) {
+        margin-bottom: 30px;
+    }
 }
 
 .mil-mt-60 {
