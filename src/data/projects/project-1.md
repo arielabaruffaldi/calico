@@ -1,54 +1,47 @@
 ---
 #preview
-title: Ensamble Gráfico
+title: 47 Street
 image: /img/works/1.jpg
-category: WEB DESIGN & DEVELOPMENT
-date: 2022
+category: WEB DEVELOPMENT
+date: 2023
 
 #params
 layout: "one"
 
 #full details
-introTitle: "Ensamble <span class=\"mil-thin\">Gráfico</span>"
-fullImage: /img/works/1/1.jpg
+introTitle: "Plant <span class=\"mil-thin\">Base</span>"
 details:
     - label: "Client:"
-      value: "Ensamble Gráfico"
+      value: "Envato"
 
     - label: "Date:"
       value: "April 2022"
 
+    - label: "Author"
+      value: "Paul Trueman"
+
 description:
     enabled: 1
-    title: ""
+    title: Simplicity, elegance, innovation!
     content: "
       <p>A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy.The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.</p>
       <p>Presents a simple and quiet state when not in use, delivering a gentle and security.At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.</p>
     "
 
-demoLink: "https://ensamblegrafico.com.ar/"
+demoLink: "https://www.47street.com.ar/"
 
 gallery: 
     enabled: 1
     items:
-        - image: /img/works/1/2.jpg
+        - image: /img/works/2/1.gif
           alt: "image"
 
-        - image: /img/works/1/3.jpg
+        - image: /img/works/2/2.jpg
           alt: "image"
 
-        - image: /img/works/1/4.jpg
+        - image: /img/works/2/3.jpg
           alt: "image"
 
-        - image: /img/works/1/5.jpg
-          alt: "image"
-
-gallery2: 
-    enabled: 1
-    items:
-        - image: /img/works/1/6.jpg
-          alt: "image"
-
-        - image: /img/works/1/7.jpg
+        - image: /img/works/2/4.jpg
           alt: "image"
 ---

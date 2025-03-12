@@ -1,16 +1,15 @@
 ---
 #preview
-title: Xborderpack
-image: /img/works/3.jpg
-category: WEB DESIGN & DEVELOPMENT
+title: Cecchini
+image: /img/works/3.png
+category: WEB DEVELOPMENT
 date: 2022
 
 #params
 layout: "one"
 
 #full details
-introTitle: Kemia Honest <span class="mil-thin">Skincare</span>
-
+introTitle: "Plant <span class=\"mil-thin\">Base</span>"
 details:
     - label: "Client:"
       value: "Envato"
@@ -29,21 +28,20 @@ description:
       <p>Presents a simple and quiet state when not in use, delivering a gentle and security.At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.</p>
     "
 
-demoLink: "http://www.xborderpack.com/"
-
+demoLink: "https://www.cecchini.com.ar/"
 
 gallery: 
     enabled: 1
     items:
-        - image: /img/works/3/1.jpg
+        - image: /img/works/2/1.gif
           alt: "image"
 
-        - image: /img/works/3/2.jpg
+        - image: /img/works/2/2.jpg
           alt: "image"
 
-        - image: /img/works/3/3.jpg
+        - image: /img/works/2/3.jpg
           alt: "image"
 
-        - image: /img/works/3/4.jpg
+        - image: /img/works/2/4.jpg
           alt: "image"
 ---
