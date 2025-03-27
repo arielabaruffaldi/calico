@@ -94,7 +94,7 @@ const ProjectsGrid = ({ projects, columns }) => {
                             <div className="mil-descr">
                                 <div className="mil-labels mil-up mil-mb-15">
                                     <div className="mil-label mil-upper mil-accent">{item.category}</div>
-                                    <div className="mil-label mil-upper">{item.date}</div>
+                                    {/* <div className="mil-label mil-upper">{item.date}</div> */}
                                 </div>
                                 <h4 className="mil-up">{item.title}</h4>
                             </div>
