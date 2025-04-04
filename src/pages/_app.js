@@ -5,7 +5,6 @@ import { IntlProvider, useIntl } from "react-intl";
 import "../styles/scss/style.scss";
 import "../styles/globals.css";
 import { register } from "swiper/element/bundle";
-import { GA } from "../lib/GA";
 
 // register Swiper custom elements
 register();
@@ -20,6 +19,7 @@ function AppContent({ Component, pageProps }) {
         <title>{AppData.settings.siteName} - {intl.formatMessage({ id: "page.seo.title" })}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={intl.formatMessage({ id: "page.seo.description" })} />
+      
         <meta name="keywords" content={intl.formatMessage({ id: "page.seo.keywords" })} />
         <meta name="author" content={AppData.settings.siteName} />
         <meta name="robots" content="index, follow" />
@@ -38,8 +38,6 @@ function AppContent({ Component, pageProps }) {
         <meta property="og:image" content="/img/logo.png" />
         <meta property="og:site_name" content={AppData.settings.siteName} />
         {/* seo end */}
-        <GA />
-
       </Head>
       <Component {...pageProps} />
     </>

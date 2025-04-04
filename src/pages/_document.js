@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 class MyDocument extends Document {
   render() {
@@ -15,6 +16,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="/css/plugins/swiper.min.css" />
           <link rel="stylesheet" href="/css/plugins/magnific-popup.css" />  
           {/* public assets end */}
+
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} /> 
         </Head>
         <body>
           <Main />
