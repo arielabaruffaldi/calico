@@ -69,23 +69,27 @@ function MyApp({ Component, pageProps }) {
     }, [router]);
   }
 
-  usePageView();
+  if (process.env.NODE_ENV === "production") {
+    usePageView();
+  }
 
   return (
     <IntlProvider locale={locale || "en"} messages={messages}>
       {/* Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      {process.env.NODE_ENV === "production" && <>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
-      </Script>
+        </Script>
+      </>}
       <AppContent Component={Component} pageProps={pageProps} />
     </IntlProvider>
   );
