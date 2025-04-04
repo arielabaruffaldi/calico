@@ -110,7 +110,7 @@ const DefaultFooter = ({ extraClass }) => {
               <div className="col-md-4 col-lg-6 mil-mb-60">
                 <div className="mil-vert-between">
                   <div className="mil-mb-30">
-                    <ul className="mil-social-icons mil-up">
+                   {/*  <ul className="mil-social-icons mil-up">
                       {AppData.social.map((item, key) => (
                         <li key={`footer-social-item-${key}`}>
                           <a
@@ -122,7 +122,7 @@ const DefaultFooter = ({ extraClass }) => {
                           </a>
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
                   </div>
                   <p className="mil-light-soft mil-up">
                     © {new Date().getFullYear()} {AppData.footer.copy}
