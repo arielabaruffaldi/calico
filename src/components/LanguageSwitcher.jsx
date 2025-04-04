@@ -26,7 +26,7 @@ function LanguageSwitcher() {
     console.log({pathWithoutLocale});
     
     // Construimos la nueva URL con el nuevo idioma
-    window.location.href = `/${newLocale}${pathWithoutLocale}`;
+    // window.location.href = `/${newLocale}${pathWithoutLocale}`;
     setToggle(false);
   };
 

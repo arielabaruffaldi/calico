@@ -50,25 +50,25 @@ export const ScrollAnimation = () => {
     // parallax
     const parallaxImage = document.querySelectorAll(".mil-parallax");
 
-    if (window.innerWidth > 960) {
-        parallaxImage.forEach((section) => {
-            var value1 = section.getAttribute('data-value-1');
-            var value2 = section.getAttribute('data-value-2');
+    // if (window.innerWidth > 960) {
+    //     parallaxImage.forEach((section) => {
+    //         var value1 = section.getAttribute('data-value-1');
+    //         var value2 = section.getAttribute('data-value-2');
 
-            gsap.fromTo(section, {
-                ease: 'sine',
-                y: value1,
+    //         gsap.fromTo(section, {
+    //             ease: 'sine',
+    //             y: value1,
 
-            }, {
-                y: value2,
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: 'play none none reverse',
-                }
-            });
-        });
-    }
+    //         }, {
+    //             y: value2,
+    //             scrollTrigger: {
+    //                 trigger: section,
+    //                 scrub: true,
+    //                 toggleActions: 'play none none reverse',
+    //             }
+    //         });
+    //     });
+    // }
 
     // rotate
     const rotate = document.querySelectorAll(".mil-rotate");

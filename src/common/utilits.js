@@ -9,14 +9,14 @@ export const AnchorSscroll = () => {
         var target = document.querySelector(link.getAttribute('href'));
         var offset = 0;
 
-        if ( window.innerWidth < 1200 ) {
-          offset = 90;
-        }
+        // if ( window.innerWidth < 1200 ) {
+        //   offset = 90;
+        // }
   
-        window.scrollTo({
-            top: target.offsetTop - offset,
-            behavior: "smooth"
-        });
+        // window.scrollTo({
+        //     top: target.offsetTop - offset,
+        //     behavior: "smooth"
+        // });
       });
     });
 };
